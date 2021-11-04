@@ -26,11 +26,11 @@
     "url": "https://github.com/superjoe30/node-tmx-parser/issues"
   },
   "dependencies": {
-    "pend": "~1.2.0",
-    "sax": "~1.1.2"
+    "pend": "~1.2.0"
   },
   "devDependencies": {
     "microbundle": "^0.14.1",
-    "mocha": "~2.3.0"
+    "mocha": "~2.3.0",
+    "sax": "~1.1.2"
   }
 }

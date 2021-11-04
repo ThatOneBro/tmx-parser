@@ -1,10 +1,20 @@
 {
   "name": "tmx-parser",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "parse and load tiled maps",
-  "main": "index.js",
+  "type": "module",
+  "source": "index.js",
+  "main": "./dist/tmx-parser.js",
+  "exports": {
+    "require": "./dist/tmx-parser.cjs",
+    "default": "./dist/tmx-parser.modern.js"
+  },
+  "module": "./dist/tmx-parser.module.js",
+  "unpkg": "./dist/tmx-parser.umd.js",
   "scripts": {
-    "test": "mocha --reporter spec test/test.js"
+    "test": "mocha --reporter spec test/test.js",
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
   "repository": {
     "type": "git",
@@ -20,6 +30,7 @@
     "sax": "~1.1.2"
   },
   "devDependencies": {
+    "microbundle": "^0.14.1",
     "mocha": "~2.3.0"
   }
 }
